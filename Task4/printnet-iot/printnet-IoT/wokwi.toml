@@ -1,0 +1,14 @@
+[wokwi]
+version = 1
+# Вкажіть шлях до прошивки (відповідно до вашого середовища PlatformIO)
+firmware = ".pio/build/esp32-s3-devkitm-1/firmware.bin"
+elf = ".pio/build/esp32-s3-devkitm-1/firmware.elf"
+
+# Задайте тип плати
+board = "esp32-s3-devkitm-1"
+
+# Налаштування емуляції
+simulation_speed = 1.0  # Швидкість емуляції (1.0 - реальний час)
+
+# Налаштування серійного порту
+serial_baud_rate = 115200

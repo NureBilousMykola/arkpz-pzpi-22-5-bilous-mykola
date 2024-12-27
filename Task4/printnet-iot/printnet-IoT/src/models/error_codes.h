@@ -1,0 +1,11 @@
+#pragma once
+
+enum class ErrorCode {
+    NONE = 0,
+    WIFI_CONNECTION_FAILED = 100,
+    MQTT_CONNECTION_FAILED = 200,
+    LOCK_MECHANISM_ERROR = 300,
+    INVALID_TOKEN = 400,
+    DOOR_SENSOR_ERROR = 500,
+    LOW_BATTERY = 600
+};

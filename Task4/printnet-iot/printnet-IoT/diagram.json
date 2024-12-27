@@ -1,0 +1,110 @@
+{
+  "version": 1,
+  "author": "n1ckolasha",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "board-esp32-s3-devkitc-1",
+      "id": "esp",
+      "top": 0,
+      "left": 0,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led_status",
+      "top": -50,
+      "left": 100,
+      "attrs": {
+        "color": "green"
+      }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "door_sensor",
+      "top": -50,
+      "left": 200,
+      "attrs": {
+        "color": "green"
+      }
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "lock",
+      "top": 50,
+      "left": 300,
+      "attrs": {}
+    }
+  ],
+  "connections": [
+    [
+      "esp:TX",
+      "$serialMonitor:RX",
+      "",
+      []
+    ],
+    [
+      "esp:RX",
+      "$serialMonitor:TX",
+      "",
+      []
+    ],
+    [
+      "led_status:A",
+      "esp:2",
+      "green",
+      [
+        "v0"
+      ]
+    ],
+    [
+      "led_status:C",
+      "esp:GND.2",
+      "green",
+      [
+        "v0"
+      ]
+    ],
+    [
+      "door_sensor:1.l",
+      "esp:17",
+      "green",
+      [
+        "h0"
+      ]
+    ],
+    [
+      "door_sensor:2.l",
+      "esp:GND.4",
+      "green",
+      [
+        "h0"
+      ]
+    ],
+    [
+      "lock:IN",
+      "esp:16",
+      "green",
+      [
+        "h0"
+      ]
+    ],
+    [
+      "lock:GND",
+      "esp:GND.4",
+      "black",
+      [
+        "h0"
+      ]
+    ],
+    [
+      "lock:VCC",
+      "esp:3V3.1",
+      "red",
+      [
+        "h0"
+      ]
+    ]
+  ],
+  "dependencies": {}
+}
