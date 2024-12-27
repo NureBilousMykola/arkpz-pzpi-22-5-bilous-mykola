@@ -1,0 +1,48 @@
+# docker-compose.test.yml
+version: '3.8'
+
+services:
+  postgres_test:
+    image: postgres:17.1
+    ports:
+      - "5454:5454"  # Інший порт, щоб не конфліктував з основною базою
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=printnet_test
+    volumes:
+      - postgres_test_data:/var/lib/postgresql/data
+    networks:
+      - test_network
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -U postgres" ]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  api_test:
+    build:
+      context: printnet-backend
+      dockerfile: printnet-backend/Dockerfile.test
+    environment:
+      - NODE_ENV=test
+      - DB_HOST=postgres_test
+      - DB_PORT=5432
+      - DB_USERNAME=postgres
+      - DB_PASSWORD=postgres
+      - DB_DATABASE=printnet_test
+      - JWT_SECRET=test_secret
+      - JWT_EXPIRES_IN=1h
+    depends_on:
+      postgres_test:
+        condition: service_healthy
+    networks:
+      - test_network
+
+networks:
+  test_network:
+    driver: bridge
+
+volumes:
+  postgres_test_data:
+
