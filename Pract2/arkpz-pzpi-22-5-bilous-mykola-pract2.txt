@@ -46,7 +46,7 @@ o	Encapsulate Collection.
 •	Засвоїв важливість написання чистого коду для підтримки та масштабування програмних проєктів.
 
 Посилання на захист презентації: https://youtu.be/xrAKNgCAs54
-Посилання на GitHub: 
+Посилання на GitHub: https://github.com/NureBilousMykola/arkpz-pzpi-22-5-bilous-mykola/blob/main/Pract2/arkpz-pzpi-22-5-bilous-mykola-pract2.txt
  
 ДОДАТОК А
 Слайди презентації:
