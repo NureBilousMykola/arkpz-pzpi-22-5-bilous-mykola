@@ -36,8 +36,8 @@
 1. Було створено презентацію на тему «Правила оформлення програмного коду» (див. додаток А).
 
 Висновок: Під час практичної роботи було розглянуто основні принципи написання чистого, ефективного та підтримуваного коду на Kotlin. Це включає правила найменування, форматування та написання багаторазового коду, що допомагає створювати якісний продукт. Навички, здобуті під час цієї роботи, сприятимуть створенню більш якісного програмного забезпечення.
-Посилання на захист презентації: https://www.youtube.com/watch?v=VjMoeZ2Vgpk
-Посилання на GitHub: https://github.com/NureBilousMykola/arkpz-pzpi-22-5-bilous-mykola/Pract1/arkpz-pzpi-22-5-bilous-mykola-pract1.txt
+Посилання на захист презентації: https://www.youtube.com/VjMoeZ2Vgpk
+Посилання на GitHub: https://github.com/NureBilousMykola/arkpz-pzpi-22-5-bilous-mykola/blob/main/Pract1/arkpz-pzpi-22-5-bilous-mykola-pract1.txt
  
 ДОДАТОК А
 Слайди презентації:
